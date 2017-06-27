@@ -63,10 +63,12 @@ public class WiFiChangeActivity extends Activity
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.bEnable:
-
+                wifiManager.setWifiEnabled(true);
+                text.append("\nStart enable Wi-Fi...");
                 break;
             case R.id.bDisable:
-
+                wifiManager.setWifiEnabled(false);
+                text.append("\nStart disable Wi-Fi...");
                 break;
         }
     }
